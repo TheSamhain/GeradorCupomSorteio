@@ -4,61 +4,34 @@
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
-    #principal {
-      min-width: 1034px;
-      height: 192px;
-      max-width: 1034px;
-      border-collapse: collapse;
-    }
-
-    .linha {
-      background-image: url(Rifa.jpg);
-      background-repeat: no-repeat;
-      background-size: contain;
-    }
-
-    .numero {
-      padding: 0px;
-      color: white;
-    }
-
-    .n1 {
-      transform: rotate(-90deg);
-    }
-    .n2 {
-      transform: rotate(90deg);
-    }
-
-    .colunaNum {
-      
-    }
-  </style>
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-  <table border="1" id="principal">
-    <tr class="linha">
-      <td class="numero n1">
-        <table  class="colunaNum">
-          <tr >
-            <td >Nº</td>
-            <td>0001</td>
-          </tr>
-        </table>
-      </td>
-      <td>cupom1</td>
-      <td>cupom2</td>
-      <td class="numero n2">
-        <table  class="colunaNum">
-          <tr >
-            <td >Nº</td>
-            <td>0001</td>
-          </tr>
-        </table>
-      </td>
-    </tr>
-  </table>
+  <div id="principal">
+    <div class="linha">
+      <div class="numero ">
+        <span class="n1">0001</span>
+        <span class="n1">Nº</span>
+      </div>
+      <div class="conteudo">
+        <span>Sorteio de natal<br>Cosméticos</span>
+        <span>O sorteio será realizado no dia </span>
+        <span>Prêmio: Uma cesta com produtos de cosméticos e perfumaria.</span>
+        <span class="valor">Valor - R$ 5,00</span>
+      </div>
+      <div class="conteudo">
+        <span>Sorteio de natal<br>Cosméticos</span>
+        <pre>Nome:     ___________________________________ </pre>
+        <pre>Telefone: ___________________________________</pre>
+        <span class="valor">Valor - R$ 5,00</span>
+      </div>
+      <div class="numero">
+        <span class="n2">Nº</span>
+        <span class="n2">0001</span>
+      </div>
+    </div>
+  </div>
 </body>
 
 </html>
