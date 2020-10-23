@@ -1,30 +1,45 @@
-import React from 'react';
+import React, { useState } from 'react';
+import Form from './components/form';
+import Ticket from './components/ticket';
 import './style.css';
 
 function App() {
+  var today = new Date();
+  var dd = String(today.getDate()).padStart(2, '0');
+  var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+  var yyyy = today.getFullYear();
+
+  today = mm + '/' + dd + '/' + yyyy;
+
+  const items = [];
+  const [qtde, setQtde] = useState(1);
+  const [titulo, setTitulo] = useState('Título');
+  const [data, setData] = useState(today);
+  const [premio, setPremio] = useState('Prêmio');
+  const [valor, setValor] = useState("1,00");
+
+  for (var i = 1; i <= qtde; i++) {
+    items.push(<Ticket
+      id={i}
+      titulo={titulo}
+      data={data}
+      premio={premio}
+      valor={valor}
+    />);
+  }
+
   return (
-    <div id="principal">
-      <div class="linha">
-        <div class="numero ">
-          <span class="n1">0001</span>
-          <span class="n1">Nº</span>
-        </div>
-        <div class="conteudo">
-          <span>Sorteio de natal<br />Cosméticos</span>
-          <span>O sorteio será realizado no dia </span>
-          <span>Prêmio: Uma cesta com produtos de cosméticos e perfumaria.</span>
-          <span class="valor">Valor - R$ 5,00</span>
-        </div>
-        <div class="conteudo">
-          <span>Sorteio de natal<br />Cosméticos</span>
-          <pre>Nome:     ___________________________________ </pre>
-          <pre>Telefone: ___________________________________</pre>
-          <span class="valor">Valor - R$ 5,00</span>
-        </div>
-        <div class="numero">
-          <span class="n2">Nº</span>
-          <span class="n2">0001</span>
-        </div>
+    <div>
+      <Form
+        setTitulo={setTitulo}
+        setData={setData}
+        setQtde={setQtde}
+        qtde={qtde}
+        setPremio={setPremio}
+        setValor={setValor}
+      />
+      <div id="principal">
+        {items}
       </div>
     </div>
   );

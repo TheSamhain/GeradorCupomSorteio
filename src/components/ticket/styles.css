@@ -1,0 +1,40 @@
+.ticket {
+  background-image: url(../../Rifa.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 192px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.numero {
+  color: white;
+  width: 33px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.n1 {
+  transform: rotate(-90deg);
+}
+
+.n2 {
+  transform: rotate(90deg);
+}
+
+.conteudo {
+  flex: 1;
+  border-left: 1px black dashed;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.valor {
+  color: #ae4e54;
+}
