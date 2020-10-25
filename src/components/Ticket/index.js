@@ -4,7 +4,7 @@ import './styles.css';
 function Ticket({ id, titulo, data, premio, valor }) {
     return (
         <div className="ticket">
-            <div className="numero ">
+            <div className="numero n1">
                 <span className="n1">{id.toString().padStart(4, '0')}</span>
                 <span className="n1">Nº</span>
             </div>
@@ -30,7 +30,7 @@ function Ticket({ id, titulo, data, premio, valor }) {
                 </div>
                 <span className="valor">Valor: R$ {valor}</span>
             </div>
-            <div className="numero">
+            <div className="numero n2">
                 <span className="n2">Nº</span>
                 <span className="n2">{id.toString().padStart(4, '0')}</span>
             </div>

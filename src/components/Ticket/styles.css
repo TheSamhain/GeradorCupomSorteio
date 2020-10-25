@@ -1,7 +1,4 @@
 .ticket {
-  --background-image: url(../../assets/Rifa.jpg);
-  background-repeat: no-repeat;
-  background-size: auto;
   height: 192px;
   min-width: 1034px;
   max-width: 1034px;
@@ -19,13 +16,22 @@
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+
 }
 
-.n1 {
+div.n1 {
+  border-right: 1px solid black;
+}
+
+div.n2 {
+  border-left: 1px solid black;
+}
+
+span.n1 {
   transform: rotate(-90deg);
 }
 
-.n2 {
+span.n2 {
   transform: rotate(90deg);
 }
 

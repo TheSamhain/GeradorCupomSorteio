@@ -23,19 +23,17 @@ function Form({ setTitulo, setData, setInitNum, setLastNum, initNum, lastNum, se
             </div>
             <div className="linha">
                 <label>Título:
-                    <input type="text" placeholder="Título" onInput={event => setTitulo(event.target.value)} />
+                    <input type="text" maxLength="30" placeholder="Título" onInput={event => setTitulo(event.target.value)} />
                 </label>
                 <label>Dia do Sorteio:
                     <input type="date" onInput={event => setData(formatData(event.target.value))} />
-                </label>
-                <label>Prêmio:
-                    <input type="text" placeholder="Prêmio" onInput={event => setPremio(event.target.value)} />
                 </label>
                 <label>Valor:
                     <input type="text" placeholder="Valor" onInput={event => setValor(event.target.value)} />
                 </label>
             </div>
             <div className="linha">
+                <textarea type="text" maxLength="69" placeholder="Prêmio" onInput={event => setPremio(event.target.value)} />
                 <button onClick={() => window.print()}> IMPRIMIR</button>
             </div>
         </div>
