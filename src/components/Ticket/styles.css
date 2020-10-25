@@ -1,0 +1,95 @@
+.ticket {
+  --background-image: url(../../assets/Rifa.jpg);
+  background-repeat: no-repeat;
+  background-size: auto;
+  height: 192px;
+  min-width: 1034px;
+  max-width: 1034px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  border-bottom: 1px dashed black;
+}
+
+.numero {
+  -color: white;
+  color: black;
+  width: 33px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.n1 {
+  transform: rotate(-90deg);
+}
+
+.n2 {
+  transform: rotate(90deg);
+}
+
+.conteudo {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  text-align: center;
+}
+
+.pontilhado {
+  border-left: 1px black dashed;
+}
+
+.valor {
+  -color: #ad4c53;
+  color: black;
+}
+
+.infos {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.lineInfo {
+  border-bottom: 1px solid black;
+  width: 400px;
+}
+
+span.infos {
+  width: 100px;
+}
+
+@media print {
+  .numero {
+    width: 17px;
+  }
+
+  span.infos {
+    width: 80px;
+  }
+
+  .lineInfo {
+    width: 250px;
+  }
+
+  .ticket {
+    height: 129px;
+    min-width: 700px;
+    max-width: 700px;
+    margin-bottom: 5px;
+
+    page-break-inside: avoid;
+  }
+
+  .conteudo {
+   margin-left: 1px; 
+  }
+
+  .pontilhado {
+    width: 340px;
+  }
+}

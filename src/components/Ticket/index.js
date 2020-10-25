@@ -9,15 +9,25 @@ function Ticket({ id, titulo, data, premio, valor }) {
                 <span className="n1">Nº</span>
             </div>
             <div className="conteudo">
-                <span>{titulo}</span>
+                <span><b>{titulo}</b></span>
                 <span>O sorteio será realizado no dia {data} </span>
                 <span>Prêmio: {premio}</span>
                 <span className="valor">Valor - R$ {valor}</span>
             </div>
-            <div className="conteudo">
-                <span>{titulo}</span>
-                <pre>Nome:     ___________________________________ </pre>
-                <pre>Telefone: ___________________________________</pre>
+            <div className="conteudo pontilhado">
+                <span><b>{titulo}</b></span>
+                <div className="infos">
+                    <span className="infos">Nome:</span>
+                    <span className="lineInfo" />
+                </div>
+                <div className="infos">
+                    <span className="infos">Telefone:</span>
+                    <span className="lineInfo" />
+                </div>
+                <div className="infos">
+                    <span className="infos">Endereço:</span>
+                    <span className="lineInfo" />
+                </div>
                 <span className="valor">Valor: R$ {valor}</span>
             </div>
             <div className="numero">

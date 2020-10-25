@@ -1,0 +1,25 @@
+#form{
+    padding: 10px;
+}
+
+label {
+    margin: 10px;
+}
+
+button {
+    margin: 10px;
+}
+
+.linha {
+    margin-top: 5px;
+}
+
+input {
+    margin-left: 5px;
+}
+
+@media print {
+    #form {
+        display: none;
+    }
+}

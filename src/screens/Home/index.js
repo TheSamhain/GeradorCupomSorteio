@@ -1,48 +1,52 @@
 import React, { useState } from 'react';
-import Form from './components/form';
-import Ticket from './components/ticket';
+import Form from '../../components/Form';
+import Ticket from '../../components/Ticket';
 import './style.css';
 
-function App() {
+function Home() {
   var today = new Date();
   var dd = String(today.getDate()).padStart(2, '0');
   var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
   var yyyy = today.getFullYear();
 
-  today = mm + '/' + dd + '/' + yyyy;
+  today = dd + '/' + mm + '/' + yyyy;
 
   const items = [];
-  const [qtde, setQtde] = useState(1);
-  const [titulo, setTitulo] = useState('Título');
+  const [initNum, setInitNum] = useState(1);
+  const [lastNum, setLastNum] = useState(1);
+  const [titulo, setTitulo] = useState('Título do sorteio');
   const [data, setData] = useState(today);
-  const [premio, setPremio] = useState('Prêmio');
+  const [premio, setPremio] = useState('prêmio do sorteio');
   const [valor, setValor] = useState("1,00");
 
-  for (var i = 1; i <= qtde; i++) {
+  for (var i = initNum; i <= lastNum; i++) {
     items.push(<Ticket
       id={i}
       titulo={titulo}
       data={data}
       premio={premio}
       valor={valor}
+      key={i}
     />);
   }
 
   return (
-    <div>
+    <div id="principal">
       <Form
         setTitulo={setTitulo}
         setData={setData}
-        setQtde={setQtde}
-        qtde={qtde}
+        setInitNum={setInitNum}
+        setLastNum={setLastNum}
+        initNum={initNum}
+        lastNum={lastNum}
         setPremio={setPremio}
         setValor={setValor}
       />
-      <div id="principal">
+      <div id="tickets">
         {items}
       </div>
     </div>
   );
 }
 
-export default App;
+export default Home;

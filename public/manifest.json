@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Gerador Cupom",
+  "name": "Gerador de Cupom para Sorteio",
   "icons": [
     {
       "src": "favicon.ico",
