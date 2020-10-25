@@ -12,6 +12,19 @@
   flex-direction: column;
 }
 
+@media screen and (max-width: 600px){
+  #tickets {
+    overflow-y: auto;
+    overflow-x: auto;
+    padding: 5px;
+  }
+
+  #principal {
+    height: 100%;
+    overflow: auto;
+  }
+}
+
 @media print {
   #tickets {
     overflow-y: auto;

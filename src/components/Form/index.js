@@ -33,7 +33,9 @@ function Form({ setTitulo, setData, setInitNum, setLastNum, initNum, lastNum, se
                 </label>
             </div>
             <div className="linha">
-                <textarea type="text" maxLength="69" placeholder="Prêmio" onInput={event => setPremio(event.target.value)} />
+                <label>Prêmio:
+                <input type="text" maxLength="69" placeholder="Prêmio" onInput={event => setPremio(event.target.value)} />
+                </label>
                 <button onClick={() => window.print()}> IMPRIMIR</button>
             </div>
         </div>

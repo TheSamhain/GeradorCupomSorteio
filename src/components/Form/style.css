@@ -29,3 +29,21 @@ textarea{
         display: none;
     }
 }
+
+@media screen and (max-width: 600px){
+    #form {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .linha {
+        display: flex;
+        flex-direction: column;
+    }
+
+    label {
+        display: flex;
+        flex-direction: column;   
+    }
+}
