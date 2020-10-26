@@ -28,7 +28,10 @@ function Form({ setTitulo, setData, setInitNum, setLastNum, setPremio, setValor,
             premio,
             valor,
         };
-        var cookie = ['dados', '=', JSON.stringify(value), '; path=/;', '; SameSite=Lax'].join('');
+        var d = new Date()
+        d.setTime(d.getTime() + (100 * 86400000)); // 100 dias
+        var expires = "expires=" + d.toUTCString();
+        var cookie = ['dados', '=', JSON.stringify(value), '; ', expires, '; path=/;', '; SameSite=Lax'].join('');
         document.cookie = cookie;
         window.print();
     }
@@ -47,7 +50,7 @@ function Form({ setTitulo, setData, setInitNum, setLastNum, setPremio, setValor,
                 <label>Título:
                     <input type="text" value={titulo} maxLength="30" placeholder="Título" onInput={event => setTitulo(event.target.value)} />
                 </label>
-                
+
                 <label>Dia do Sorteio:
                     <input type="date" value={unformatData(data)} onInput={event => setData(formatData(event.target.value))} />
                 </label>
