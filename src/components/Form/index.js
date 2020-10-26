@@ -57,7 +57,7 @@ function Form({ setTitulo, setData, setInitNum, setLastNum, setPremio, setValor,
             </div>
             <div className="linha">
                 <label>Prêmio:
-                <input type="text" value={premio} maxLength="69" placeholder="Prêmio" onInput={event => setPremio(event.target.value)} />
+                <input type="text" value={premio} maxLength="85" placeholder="Prêmio" onInput={event => setPremio(event.target.value)} />
                 </label>
                 <button onClick={() => imprimir()}> IMPRIMIR</button>
             </div>

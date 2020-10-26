@@ -11,7 +11,7 @@ function Ticket({ id, titulo, data, premio, valor }) {
             <div className="conteudo">
                 <span><b>{titulo}</b></span>
                 <span>O sorteio será realizado no dia {data} </span>
-                <span>Prêmio: {premio}</span>
+                <span className="premio" >Prêmio: {premio}</span>
                 <span className="valor">Valor - R$ {valor}</span>
             </div>
             <div className="conteudo pontilhado">

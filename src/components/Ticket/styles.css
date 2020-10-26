@@ -10,7 +10,6 @@
 }
 
 .numero {
-  -color: white;
   color: black;
   width: 33px;
   display: flex;
@@ -69,38 +68,11 @@ span.infos {
   width: 100px;
 }
 
-@media print {
-  .numero {
-    width: 17px;
-  }
-
-  span.infos {
-    width: 80px;
-  }
-
-  .lineInfo {
-    width: 250px;
-  }
-
-  .ticket {
-    height: 129px;
-    min-width: 700px;
-    max-width: 700px;
-    margin-bottom: 5px;
-
-    page-break-inside: avoid;
-  }
-
-  .conteudo {
-   margin-left: 1px; 
-  }
-
-  .pontilhado {
-    width: 340px;
-  }
+.premio {
+  text-align: start;
 }
 
-@media screen and (max-width: 600px){
+@media print, screen and (max-width: 600px) {
   .numero {
     width: 17px;
   }
@@ -124,9 +96,12 @@ span.infos {
 
   .conteudo {
    margin-left: 1px; 
+   padding: 5px;
+   font-size: medium;
   }
 
   .pontilhado {
     width: 340px;
   }
+ 
 }
